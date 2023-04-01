@@ -48,12 +48,12 @@ document.getElementById('indicators').appendChild(paginationElement);
 var paginationCreatedUl = document.getElementById('pagination-ul');
 
 // Get Pagination Items | Array.form [ES6 Feature]
-var paginationsBullets = Array.from(document.querySelectorAll('#pagination-ul li'));
+var paginationBullets = Array.from(document.querySelectorAll('#pagination-ul li'));
 
 // Loop Through All Bullets Items
-for (var i = 0; i < paginationsBullets.length; i++) {
+for (var i = 0; i < paginationBullets.length; i++) {
 
-  paginationsBullets[i].onclick = function () {
+  paginationBullets[i].onclick = function () {
 
     currentSlide = parseInt(this.getAttribute('data-index'));
 
@@ -156,7 +156,7 @@ function removeAllActive() {
   });
 
   // Loop Through Pagination Bullets
-  paginationsBullets.forEach(function (bullet) {
+  paginationBullets.forEach(function (bullet) {
 
     bullet.classList.remove('active');
 
